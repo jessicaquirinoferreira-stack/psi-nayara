@@ -6,6 +6,7 @@ import Redefina from './components/Redefina';
 import Sobre from './components/Sobre';
 import Servicos from './components/Servicos';
 import EssenciaPsicanalise from './components/EssenciaPsicanalise';
+import Palestra from './components/Palestra';
 import AtendimentoSocial from './components/AtendimentoSocial';
 import FAQ from './components/FAQ';
 import Depoimentos from './components/Depoimentos';
@@ -54,6 +55,9 @@ export default function App() {
 
                 {/* The Essence of Psychoanalysis (Farol Metaphor) */}
                 <EssenciaPsicanalise />
+
+                {/* Mental Health Lecture with auto playing video */}
+                <Palestra />
 
                 {/* Atendimento Social program and Eligibility form */}
                 <AtendimentoSocial />

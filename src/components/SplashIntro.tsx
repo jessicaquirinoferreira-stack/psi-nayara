@@ -27,9 +27,9 @@ export default function SplashIntro({ onComplete }: SplashIntroProps) {
     };
   }, []);
 
-  // Update progress bar precisely over 6 seconds (6000ms)
+  // Update progress bar precisely over 4 seconds (4000ms)
   useEffect(() => {
-    const totalTime = 6000;
+    const totalTime = 4000;
     const intervalTime = 50; // Update every 50ms
     const step = (intervalTime / totalTime) * 100;
 
@@ -46,20 +46,20 @@ export default function SplashIntro({ onComplete }: SplashIntroProps) {
     return () => clearInterval(timer);
   }, []);
 
-  // Cycle subtexts every 1.5 seconds
+  // Cycle subtexts every 1.0 second
   useEffect(() => {
     const textTimer = setInterval(() => {
       setSubtextIndex((prev) => (prev + 1) % subtexts.length);
-    }, 1500);
+    }, 1000);
 
     return () => clearInterval(textTimer);
   }, []);
 
-  // Trigger completion after 6 seconds
+  // Trigger completion after 4 seconds
   useEffect(() => {
     const doneTimer = setTimeout(() => {
       onComplete();
-    }, 6000);
+    }, 4000);
 
     return () => clearTimeout(doneTimer);
   }, [onComplete]);
@@ -182,8 +182,8 @@ export default function SplashIntro({ onComplete }: SplashIntroProps) {
             transition={{ delay: 0.8, duration: 1, ease: "easeOut" }}
             className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight"
           >
-            <span className="text-brand-magenta filter drop-shadow-[0_0_4px_rgba(219,39,119,0.2)]">psi </span>
-            <span className="text-slate-800">nayraaraujo</span>
+            <span className="text-brand-magenta filter drop-shadow-[0_0_4px_rgba(219,39,119,0.2)]">Psi </span>
+            <span className="text-slate-800">NayaraAraujo</span>
           </motion.h1>
 
           <motion.p

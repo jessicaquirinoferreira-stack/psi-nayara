@@ -33,6 +33,7 @@ export default function Header({ onContactClick }: HeaderProps) {
   ];
 
   const dropdownLinks = [
+    { label: 'Palestra Saúde Mental', href: '#palestra' },
     { label: 'Perguntas Frequentes', href: '#faq' },
     { label: 'Cursos Online', href: '#cursos' },
     { label: 'Contato', href: '#contato' },
@@ -71,7 +72,7 @@ export default function Header({ onContactClick }: HeaderProps) {
               psi
             </span>
             <span className="font-sans text-xl font-bold tracking-tight text-slate-800 transition-colors group-hover:text-brand-magenta">
-              nayraaraujo
+              NayaraAraujo
             </span>
           </div>
         </a>

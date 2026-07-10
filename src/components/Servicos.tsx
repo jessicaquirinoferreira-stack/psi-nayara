@@ -138,6 +138,7 @@ export default function Servicos() {
                 alt="Psicóloga Nayara Helena de Araújo"
                 className="w-full h-full object-cover object-center scale-105"
                 referrerPolicy="no-referrer"
+                loading="lazy"
               />
             </div>
             {/* Online Indicator Dot */}

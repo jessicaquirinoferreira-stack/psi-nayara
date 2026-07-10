@@ -76,6 +76,7 @@ export default function Cursos() {
                     alt="Capa do Curso Abrindo as Portas da Clínica"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 </motion.div>
                 

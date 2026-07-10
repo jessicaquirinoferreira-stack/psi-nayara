@@ -31,6 +31,7 @@ export default function EssenciaPsicanalise() {
                   alt="Nayara Helena de Araújo - Essência da Psicanálise"
                   className="w-full h-full object-cover transform group-hover:scale-104 transition-transform duration-1000"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
                 
                 {/* Metaphor Floating Badge */}

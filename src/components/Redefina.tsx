@@ -48,6 +48,7 @@ export default function Redefina() {
                   alt="Nayara Helena de Araújo"
                   className="w-full h-full object-cover transform hover:scale-101 transition-transform duration-1000"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
                 
                 {/* Image Quote Overlay */}

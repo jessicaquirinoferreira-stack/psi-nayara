@@ -135,6 +135,7 @@ export default function Sobre() {
                   alt="Psicóloga Nayara Helena de Araújo"
                   className="w-full h-full object-cover group-hover:scale-104 transition-transform duration-1000"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
               </div>
             </motion.div>
