@@ -68,7 +68,7 @@ export default function FAQ() {
                 viewport={{ once: true }}
                 key={item.id}
                 className={`bg-white rounded-3xl border transition-all duration-300 overflow-hidden ${
-                  isOpen ? 'border-brand-magenta/30 shadow-lg shadow-pink-100/10' : 'border-slate-150 shadow-xs hover:border-brand-magenta/25'
+                  isOpen ? 'border-brand-magenta/30 shadow-lg shadow-brand-magenta/5' : 'border-slate-150 shadow-xs hover:border-brand-magenta/25'
                 }`}
               >
                 {/* Trigger Button */}
@@ -81,7 +81,7 @@ export default function FAQ() {
                   </span>
                   
                   {/* Icon */}
-                  <span className={`p-2 rounded-xl transition-colors shrink-0 ${isOpen ? 'bg-pink-50 text-brand-magenta' : 'bg-slate-50 text-slate-500'}`}>
+                  <span className={`p-2 rounded-xl transition-colors shrink-0 ${isOpen ? 'bg-brand-magenta-light/20 text-brand-magenta' : 'bg-slate-50 text-slate-500'}`}>
                     {isOpen ? <Minus className="w-4 h-4 text-brand-magenta" /> : <Plus className="w-4 h-4" />}
                   </span>
                 </button>

@@ -63,13 +63,13 @@ export default function Servicos() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
-              className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-pink-100/40 hover:border-brand-magenta/30 transition-shadow duration-300 flex flex-col justify-between group relative overflow-hidden"
+              className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-brand-magenta/10 hover:border-brand-magenta/30 transition-shadow duration-300 flex flex-col justify-between group relative overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-brand-magenta to-brand-cyan opacity-0 group-hover:opacity-100 transition-opacity" />
               
               <div>
                 {/* Icon wrapper */}
-                <div className="w-16 h-16 rounded-2xl bg-pink-50 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-2xl bg-brand-magenta-light/20 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
                   {service.icon}
                 </div>
                 
@@ -126,7 +126,7 @@ export default function Servicos() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto bg-slate-50 rounded-3xl p-8 border border-slate-150 shadow-xl shadow-pink-100/20 relative overflow-hidden flex flex-col sm:flex-row items-center gap-8"
+          className="max-w-3xl mx-auto bg-slate-50 rounded-3xl p-8 border border-slate-150 shadow-xl shadow-brand-magenta/5 relative overflow-hidden flex flex-col sm:flex-row items-center gap-8"
         >
           <div className="absolute top-0 right-0 w-24 h-24 bg-brand-magenta/5 rounded-full blur-xl pointer-events-none"></div>
 

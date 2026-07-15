@@ -74,7 +74,7 @@ export default function Contato() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-7 bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-150 shadow-xl shadow-pink-100/10 flex flex-col justify-center"
+            className="lg:col-span-7 bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-150 shadow-xl shadow-brand-magenta/5 flex flex-col justify-center"
           >
             <AnimatePresence mode="wait">
               {!submitted ? (
@@ -221,7 +221,7 @@ export default function Contato() {
               className="bg-slate-800 text-white rounded-3xl p-8 border border-slate-700 shadow-2xl flex-1 flex flex-col justify-between"
             >
               <div>
-                <h3 className="font-sans text-xl font-bold mb-6 text-pink-400 tracking-tight">Canais de Atendimento</h3>
+                <h3 className="font-sans text-xl font-bold mb-6 text-brand-magenta tracking-tight">Canais de Atendimento</h3>
                 
                 <div className="space-y-5">
                   {/* Phone */}
@@ -247,12 +247,12 @@ export default function Contato() {
                     href="mailto:psinayaraaraujo@outlook.com"
                     className="flex items-center space-x-4 p-3 rounded-2xl hover:bg-white/5 transition-colors group border border-transparent hover:border-white/5"
                   >
-                    <div className="p-3 bg-pink-500/10 text-pink-400 rounded-xl group-hover:scale-105 transition-transform">
+                    <div className="p-3 bg-brand-magenta/10 text-brand-magenta rounded-xl group-hover:scale-105 transition-transform">
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
                       <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">E-mail</h4>
-                      <p className="text-sm font-bold text-slate-100 mt-0.5 group-hover:text-pink-400 transition-colors">
+                      <p className="text-sm font-bold text-slate-100 mt-0.5 group-hover:text-brand-magenta-light transition-colors">
                         psinayaraaraujo@outlook.com
                       </p>
                     </div>
@@ -290,7 +290,7 @@ export default function Contato() {
               {/* Security Badge */}
               <div className="mt-8 pt-6 border-t border-slate-700 text-[10px] text-gray-400 flex items-center justify-between">
                 <span>Atendimento 100% Protegido</span>
-                <span className="text-pink-400 font-bold">Resolução CFP nº 11/2018</span>
+                <span className="text-brand-magenta font-bold">Resolução CFP nº 11/2018</span>
               </div>
             </motion.div>
 

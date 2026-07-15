@@ -58,22 +58,24 @@ export default function Header({ onContactClick }: HeaderProps) {
         <a href="#inicio" className="flex items-center space-x-3 group">
           <motion.div 
             whileHover={{ scale: 1.05 }}
-            className="relative w-14 h-14 rounded-full bg-white border border-brand-magenta/20 p-1.5 overflow-hidden shadow-sm shrink-0 flex items-center justify-center"
+            className="relative w-12 h-12 sm:w-14 h-14 rounded-full bg-white border border-brand-magenta/30 overflow-hidden shadow-sm shrink-0 flex items-center justify-center"
           >
             <img 
               src="https://i.postimg.cc/htygLrLz/Chat-GPT-Image-9-de-jul-de-2026-13-15-20.png" 
-              alt="Logo Psi Nayra Araújo" 
-              className="w-full h-full object-contain filter drop-shadow-[0_1px_2px_rgba(219,39,119,0.1)]"
+              alt="Logo Psi Nayara Helena de Araújo" 
+              className="w-full h-full object-contain p-1 filter drop-shadow-[0_1px_2px_rgba(192,101,50,0.05)]"
               referrerPolicy="no-referrer"
             />
           </motion.div>
-          <div className="flex items-baseline space-x-0.5">
-            <span className="font-display text-2xl font-extrabold tracking-tight text-brand-magenta transition-colors group-hover:text-brand-magenta-dark">
-              psi
+          <div className="flex flex-col text-left justify-center">
+            <span className="font-serif text-xs sm:text-sm md:text-base font-extrabold tracking-wide text-brand-cyan uppercase leading-tight group-hover:text-brand-magenta transition-colors duration-200">
+              NAYARA HELENA DE ARAÚJO
             </span>
-            <span className="font-sans text-xl font-bold tracking-tight text-slate-800 transition-colors group-hover:text-brand-magenta">
-              NayaraAraujo
-            </span>
+            <div className="flex flex-wrap items-center gap-x-1.5 text-[9px] sm:text-[10px] md:text-[11px] font-sans font-bold text-brand-magenta tracking-wide leading-none mt-1">
+              <span>Psicóloga Clínica | Psicanalista</span>
+              <span className="text-slate-300 font-normal">|</span>
+              <span className="text-slate-500 font-mono font-medium">CRP 16/10 550</span>
+            </div>
           </div>
         </a>
 

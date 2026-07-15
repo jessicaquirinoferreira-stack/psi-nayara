@@ -103,7 +103,7 @@ export default function Palestra() {
             </div>
 
             <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-              Palestra de <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-magenta to-pink-400">Saúde Mental</span>
+              Palestra de <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-magenta to-brand-magenta-light">Saúde Mental</span>
             </h2>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
@@ -122,7 +122,7 @@ export default function Palestra() {
               </div>
 
               <div className="flex items-start space-x-3">
-                <div className="p-2 bg-pink-500/10 rounded-xl border border-pink-500/20 text-pink-400 mt-1 shrink-0">
+                <div className="p-2 bg-brand-magenta/20 rounded-xl border border-brand-magenta/30 text-brand-magenta mt-1 shrink-0">
                   <Users className="w-5 h-5" />
                 </div>
                 <div>

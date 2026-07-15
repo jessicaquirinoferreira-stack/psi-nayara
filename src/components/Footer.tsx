@@ -41,11 +41,11 @@ export default function Footer() {
             className="md:col-span-2 space-y-4 text-left"
           >
             <a href="#inicio" className="flex items-center space-x-1 group">
-              <span className="font-sans text-2xl font-black tracking-tight text-brand-magenta transition-colors group-hover:text-pink-400">
+              <span className="font-sans text-2xl font-black tracking-tight text-brand-magenta transition-colors group-hover:text-brand-magenta-light">
                 psi
               </span>
               <span className="font-sans text-xl font-bold tracking-tight text-white transition-colors group-hover:text-slate-300">
-                nayaraaraujo
+                NayaraAraujo
               </span>
             </a>
             <p className="font-sans text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm font-medium">
@@ -83,14 +83,14 @@ export default function Footer() {
             className="text-left space-y-4"
           >
             <h4 className="font-sans text-xs font-bold text-white uppercase tracking-widest flex items-center space-x-1.5">
-              <ShieldAlert className="w-4 h-4 text-pink-400" />
+              <ShieldAlert className="w-4 h-4 text-brand-magenta" />
               <span>Ética CFP</span>
             </h4>
             <div className="space-y-3 text-[11px] text-slate-400 leading-relaxed font-semibold">
               <p>
                 Atendimento regulamentado pela Resolução CFP nº 11/2018. Todos os dados transmitidos são criptografados de ponta a ponta.
               </p>
-              <div className="flex items-center space-x-2 text-pink-400">
+              <div className="flex items-center space-x-2 text-brand-magenta">
                 <Globe className="w-3.5 h-3.5 animate-spin-slow" />
                 <span className="font-bold text-[10px] tracking-widest uppercase">e-Psi Cadastrada</span>
               </div>

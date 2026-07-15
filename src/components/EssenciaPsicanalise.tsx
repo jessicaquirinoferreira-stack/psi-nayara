@@ -5,7 +5,7 @@ const cupImage = "https://i.postimg.cc/MHWrrkwd/Whats-App-Image-2026-07-09-at-13
 
 export default function EssenciaPsicanalise() {
   return (
-    <section className="py-24 bg-gradient-to-tr from-pink-50/50 via-white to-cyan-50/30 relative overflow-hidden border-b border-slate-100">
+    <section className="py-24 bg-gradient-to-tr from-brand-magenta-light/10 via-white to-brand-cyan-light/25 relative overflow-hidden border-b border-slate-100">
       {/* Decorative Blur Spheres */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-cyan/5 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-magenta/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -25,7 +25,7 @@ export default function EssenciaPsicanalise() {
               {/* Backing decorative frames */}
               <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-brand-magenta/10 to-brand-cyan/10 opacity-60 blur-xl group-hover:opacity-80 transition-opacity duration-500"></div>
               
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-pink-100/30 border border-slate-200 bg-white aspect-[3/2]">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-brand-magenta/5 border border-slate-200 bg-white aspect-[3/2]">
                 <img
                   src={cupImage}
                   alt="Nayara Helena de Araújo - Essência da Psicanálise"
@@ -52,7 +52,7 @@ export default function EssenciaPsicanalise() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 text-left space-y-6 flex flex-col justify-center"
           >
-            <div className="inline-flex items-center space-x-2 bg-pink-50 text-brand-magenta px-4 py-1.5 rounded-full shadow-xs w-fit">
+            <div className="inline-flex items-center space-x-2 bg-brand-magenta-light/20 text-brand-magenta px-4 py-1.5 rounded-full shadow-xs w-fit">
               <Sparkles className="w-4 h-4" />
               <span className="text-xs font-bold uppercase tracking-wider">Abordagem Clínica</span>
             </div>
@@ -82,7 +82,7 @@ export default function EssenciaPsicanalise() {
                 whileHover={{ x: 4 }}
                 className="flex items-center space-x-3 text-slate-700 cursor-default"
               >
-                <div className="p-2 bg-pink-50 rounded-lg text-brand-magenta">
+                <div className="p-2 bg-brand-magenta-light/20 rounded-lg text-brand-magenta">
                   <Eye className="w-4 h-4" />
                 </div>
                 <span className="text-xs font-bold uppercase tracking-wide">Iluminar o Horizonte</span>
@@ -91,7 +91,7 @@ export default function EssenciaPsicanalise() {
                 whileHover={{ x: 4 }}
                 className="flex items-center space-x-3 text-slate-700 cursor-default"
               >
-                <div className="p-2 bg-cyan-50 rounded-lg text-brand-cyan">
+                <div className="p-2 bg-brand-cyan-light/20 rounded-lg text-brand-cyan">
                   <HelpCircle className="w-4 h-4" />
                 </div>
                 <span className="text-xs font-bold uppercase tracking-wide">Descobrir Novas Perguntas</span>

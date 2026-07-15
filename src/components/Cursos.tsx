@@ -43,7 +43,7 @@ export default function Cursos() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-white border border-slate-100 rounded-3xl p-6 sm:p-12 shadow-xl shadow-pink-100/10"
+          className="bg-white border border-slate-100 rounded-3xl p-6 sm:p-12 shadow-xl shadow-brand-magenta/5"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
@@ -51,7 +51,7 @@ export default function Cursos() {
             <div className="lg:col-span-7 space-y-6">
               
               {/* Tag indicator */}
-              <div className="inline-flex items-center space-x-2 bg-pink-50 border border-pink-100/50 text-brand-magenta px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-xs">
+              <div className="inline-flex items-center space-x-2 bg-brand-magenta-light/20 border border-brand-magenta-light/40 text-brand-magenta px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-xs">
                 <Flame className="w-3.5 h-3.5 text-brand-magenta fill-current animate-pulse" />
                 <span>Curso Mais Vendido para Psicólogos</span>
               </div>
@@ -69,7 +69,7 @@ export default function Cursos() {
                 {/* Generated Course Mockup Image */}
                 <motion.div 
                   whileHover={{ scale: 1.02, rotate: 1 }}
-                  className="w-40 h-40 shrink-0 rounded-2xl overflow-hidden shadow-2xl shadow-pink-100/30 border border-slate-100 bg-white"
+                  className="w-40 h-40 shrink-0 rounded-2xl overflow-hidden shadow-2xl shadow-brand-magenta/10 border border-slate-100 bg-white"
                 >
                   <img
                     src={courseImage}
@@ -109,7 +109,7 @@ export default function Cursos() {
             {/* Right side: Conversion Card */}
             <motion.div 
               whileHover={{ scale: 1.01 }}
-              className="lg:col-span-5 bg-slate-50 border border-slate-150 shadow-xl shadow-pink-100/20 rounded-3xl p-6 sm:p-8 relative overflow-hidden transition-all"
+              className="lg:col-span-5 bg-slate-50 border border-slate-150 shadow-xl shadow-brand-magenta/5 rounded-3xl p-6 sm:p-8 relative overflow-hidden transition-all"
             >
               {/* Highlight ribbon */}
               <div className="absolute top-4 right-4 bg-brand-magenta text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-md">

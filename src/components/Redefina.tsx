@@ -42,7 +42,7 @@ export default function Redefina() {
             >
               <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-brand-magenta/5 to-brand-cyan/5 opacity-60 blur-xl group-hover:opacity-80 transition-opacity duration-500"></div>
               
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-pink-100/30 border border-slate-150 bg-white aspect-[645/800]">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-brand-magenta/10 border border-slate-150 bg-white aspect-[645/800]">
                 <img
                   src={escrevendoImage}
                   alt="Nayara Helena de Araújo"
@@ -90,7 +90,7 @@ export default function Redefina() {
               transition={{ duration: 0.8 }}
               className="space-y-4"
             >
-              <div className="inline-flex items-center space-x-2 bg-pink-50 text-brand-magenta px-4 py-1.5 rounded-full shadow-xs">
+              <div className="inline-flex items-center space-x-2 bg-brand-magenta-light/20 text-brand-magenta px-4 py-1.5 rounded-full shadow-xs">
                 <Users2 className="w-4 h-4" />
                 <span className="text-xs font-bold uppercase tracking-wider">A Importância da Compatibilidade</span>
               </div>

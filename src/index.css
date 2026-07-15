@@ -5,11 +5,12 @@
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-display: 'Space Grotesk', sans-serif;
-  --color-brand-magenta: #db2777; /* Deep magenta/pink */
-  --color-brand-magenta-dark: #be185d; /* Darker pink for hover */
-  --color-brand-magenta-light: #f472b6; /* Soft pink */
-  --color-brand-cyan: #0ea5e9; /* Light clinical cyan blue */
-  --color-brand-cyan-dark: #0284c7;
+  --color-brand-magenta: #c06532; /* Terracotta/Amber accent color from reference image */
+  --color-brand-magenta-dark: #a04f22; /* Darker terracotta */
+  --color-brand-magenta-light: #eed8cd; /* Soft peach/linen tint */
+  --color-brand-cyan: #123c40; /* Deep Pine Teal primary color from reference image */
+  --color-brand-cyan-dark: #0d2c2f; /* Darker deep teal */
+  --color-brand-cyan-light: #f3f7f7; /* Soft cool mint/teal tint */
 }
 
 html {
@@ -18,8 +19,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: #fcfcfd;
-  color: #1f2937;
+  background-color: #faf6f0; /* Soft warm linen/sand white from reference image */
+  color: #1a2e30; /* Soft dark deep teal slate for better text contrast and tone match */
 }
 
 /* Scrollbar Styling */

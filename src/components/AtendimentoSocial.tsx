@@ -75,7 +75,7 @@ export default function AtendimentoSocial() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-14"
         >
-          <div className="inline-flex items-center space-x-2 bg-pink-50 border border-pink-100/50 text-brand-magenta px-4 py-1.5 rounded-full mb-4 shadow-xs">
+          <div className="inline-flex items-center space-x-2 bg-brand-magenta-light/20 border border-brand-magenta-light/40 text-brand-magenta px-4 py-1.5 rounded-full mb-4 shadow-xs">
             <Heart className="w-4 h-4 fill-current text-brand-magenta animate-pulse" />
             <span className="text-xs font-bold uppercase tracking-wider">Acolhimento Acessível</span>
           </div>
@@ -103,7 +103,7 @@ export default function AtendimentoSocial() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-100 shadow-xl shadow-pink-100/20"
+          className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-100 shadow-xl shadow-brand-magenta/5"
         >
           <AnimatePresence mode="wait">
             {!formSubmitted ? (

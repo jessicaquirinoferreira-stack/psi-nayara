@@ -97,14 +97,14 @@ export default function Sobre() {
               viewport={{ once: true }}
               className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10"
             >
-              {credentials.map((cred, index) => (
+               {credentials.map((cred, index) => (
                 <motion.div 
                   key={index} 
                   variants={itemVariants}
-                  whileHover={{ y: -4, borderColor: 'rgba(219,39,119,0.25)', boxShadow: '0 10px 25px -5px rgba(219,39,119,0.05)' }}
+                  whileHover={{ y: -4, borderColor: 'rgba(192,101,50,0.25)', boxShadow: '0 10px 25px -5px rgba(192,101,50,0.05)' }}
                   className="flex space-x-3 items-start p-5 bg-white rounded-3xl border border-slate-100 shadow-sm transition-all duration-300"
                 >
-                  <div className="p-2.5 bg-pink-50 rounded-xl shrink-0 text-brand-magenta">
+                  <div className="p-2.5 bg-brand-magenta-light/20 rounded-xl shrink-0 text-brand-magenta">
                     {cred.icon}
                   </div>
                   <div>
@@ -129,7 +129,7 @@ export default function Sobre() {
               <div className="absolute -bottom-4 -left-4 w-2/3 h-2/3 bg-brand-cyan/5 rounded-[2rem] -z-10 blur-xl"></div>
               <div className="absolute -top-4 -right-4 w-2/3 h-2/3 bg-brand-magenta/5 rounded-[2rem] -z-10 blur-xl"></div>
               
-              <div className="rounded-3xl overflow-hidden shadow-2xl shadow-pink-100/30 border border-slate-200 bg-white aspect-[389/800] max-h-[520px] mx-auto group">
+              <div className="rounded-3xl overflow-hidden shadow-2xl shadow-brand-magenta/5 border border-slate-200 bg-white aspect-[389/800] max-h-[520px] mx-auto group">
                 <img
                   src={jalecoImage}
                   alt="Psicóloga Nayara Helena de Araújo"

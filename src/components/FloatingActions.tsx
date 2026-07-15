@@ -226,7 +226,7 @@ export default function FloatingActions() {
               <img 
                 src="https://i.postimg.cc/htygLrLz/Chat-GPT-Image-9-de-jul-de-2026-13-15-20.png" 
                 alt="Logo" 
-                className="w-full h-full object-cover rounded-full"
+                className="w-full h-full object-contain p-0.5 bg-white rounded-full"
                 referrerPolicy="no-referrer"
               />
               {/* Pulsing indicator badge */}
@@ -251,7 +251,7 @@ export default function FloatingActions() {
               <div className="bg-slate-900 text-white p-4 flex items-center justify-between border-b border-slate-800">
                 <div className="flex items-center space-x-3 text-left">
                   <div className="p-2.5 bg-brand-magenta/20 text-brand-magenta rounded-xl border border-brand-magenta/30">
-                    <Sparkles className="w-5 h-5 text-pink-400" />
+                    <Sparkles className="w-5 h-5 text-brand-magenta" />
                   </div>
                   <div>
                     <h3 className="text-sm font-bold tracking-tight">Acolhimento Virtual</h3>
@@ -362,7 +362,7 @@ export default function FloatingActions() {
           href="https://www.instagram.com/psi.nayaraujo/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center p-3.5 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white rounded-full shadow-2xl border border-white/10 hover:shadow-pink-400/20"
+          className="flex items-center justify-center p-3.5 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white rounded-full shadow-2xl border border-white/10 hover:shadow-brand-magenta/30"
           title="Instagram"
         >
           <Instagram className="w-5 h-5 stroke-[2.5]" />
