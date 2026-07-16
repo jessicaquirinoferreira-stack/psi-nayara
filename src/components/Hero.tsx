@@ -5,6 +5,15 @@ import { Sparkles, Calendar, MessageSquare, ShieldCheck, Heart, Sparkle } from '
 const heroImage = "https://i.postimg.cc/vB2rrCP8/top.jpg";
 
 export default function Hero() {
+  const [imageLoaded, setImageLoaded] = React.useState(false);
+  const imgRef = React.useRef<HTMLImageElement>(null);
+
+  React.useEffect(() => {
+    if (imgRef.current?.complete) {
+      setImageLoaded(true);
+    }
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -59,131 +68,49 @@ export default function Hero() {
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col items-center"
         >
-          
-          {/* Left Column: Hero Content with accurate text and butterfly decoration */}
-          <div className="lg:col-span-7 text-left flex flex-col justify-center relative">
+          <div className="relative w-full rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl border-4 sm:border-8 border-white bg-white group">
+            {/* Soft visual filter over the image */}
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-magenta/5 via-transparent to-transparent z-10 pointer-events-none"></div>
             
-            {/* Elegant Line-art Butterfly Outline Decoration */}
-            <div className="absolute -left-10 -top-12 opacity-20 pointer-events-none select-none hidden md:block text-brand-magenta/40">
-              <svg width="110" height="110" viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="1" className="transform -rotate-12">
-                <path d="M60,95 C60,95 30,80 30,52 C30,30 48,25 60,42 C72,25 90,30 90,52 C90,80 60,95 60,95 Z" />
-                <path d="M60,95 C60,95 18,70 12,42 C6,15 28,5 48,32 C50,35 53,39 60,42" />
-                <path d="M60,95 C60,95 102,70 108,42 C114,15 92,5 72,32 C70,35 67,39 60,42" />
-                <path d="M60,42 C60,42 60,20 60,10" />
-                <path d="M60,10 C58,7 54,5 49,7" />
-                <path d="M60,10 C62,7 66,5 71,7" />
-                <circle cx="60" cy="42" r="1.5" fill="currentColor" />
-                <circle cx="60" cy="62" r="1.5" fill="currentColor" />
-                <circle cx="60" cy="82" r="1.5" fill="currentColor" />
-              </svg>
-            </div>
-
-            {/* Premium Subtitle Badge */}
-            <motion.div 
-              variants={itemVariants}
-              className="self-start inline-flex items-center space-x-2 bg-white/70 backdrop-blur-md border border-brand-magenta/15 px-4 py-1.5 rounded-full mb-6 shadow-xs cursor-default"
-            >
-              <span className="text-xs font-bold tracking-wider uppercase text-brand-cyan flex items-center space-x-1.5">
-                <span>🌍</span>
-                <span>Atendimento online para brasileiros em qualquer lugar do mundo</span>
-              </span>
-            </motion.div>
-
-            {/* Elegant Heading with exact typography and words from the image */}
-            <motion.h1 
-              variants={itemVariants}
-              className="font-serif text-3.5xl sm:text-5xl md:text-5.5xl lg:text-6xl font-normal text-brand-cyan tracking-tight mb-8 leading-tight"
-            >
-              Nem sempre conseguimos <br />
-              explicar o que estamos <br />
-              <span className="text-brand-magenta font-serif italic font-medium relative inline-block">
-                sentindo.
-                <span className="absolute bottom-1 left-0 w-full h-[3px] bg-brand-magenta/10 rounded-full" />
-              </span>
-            </motion.h1>
-
-            {/* Subtext Paragraphs exactly matching the image */}
-            <div className="space-y-6 max-w-2xl mb-10">
-              <motion.p 
-                variants={itemVariants}
-                className="font-sans text-sm sm:text-base text-slate-700 leading-relaxed font-light text-justify sm:text-left"
-              >
-                Há momentos em que a ansiedade, os conflitos, as perdas, as mudanças ou as incertezas da vida tornam a caminhada mais difícil do que gostaríamos. Nesses momentos, buscar um espaço de escuta pode ser um importante gesto de cuidado consigo mesmo.
-              </motion.p>
-
-              <motion.p 
-                variants={itemVariants}
-                className="font-sans text-sm sm:text-base text-slate-700 leading-relaxed font-light text-justify sm:text-left"
-              >
-                A psicoterapia oferece um espaço seguro de escuta, acolhimento e reflexão, onde você poderá compreender suas emoções, elaborar experiências e desenvolver novas formas de enfrentar os desafios da vida. Meu compromisso é oferecer um acompanhamento ético, respeitoso e individualizado, valorizando o seu tempo, a sua história e a singularidade de quem você é.
-              </motion.p>
-            </div>
-
-            {/* Terracotta-bordered Quote Block matching the image bottom */}
-            <motion.div 
-              variants={itemVariants}
-              className="pl-6 border-l-[3px] border-brand-magenta py-1.5 text-brand-cyan font-medium text-base sm:text-lg leading-relaxed mb-10 max-w-2xl text-left"
-            >
-              Quando você sentir que é o momento, será um privilégio acolher a sua história e caminhar ao seu lado.
-            </motion.div>
-
-            {/* Navigation & WhatsApp buttons styled with the new palette */}
-            <motion.div 
-              variants={itemVariants}
-              className="flex flex-col sm:flex-row items-center gap-4"
-            >
-              <a
-                href="https://wa.me/5516997576550?text=Ol%C3%A1%20Nayara%2C%20gostaria%20de%20agendar%20uma%20consulta"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-brand-magenta hover:bg-brand-magenta-dark text-white text-xs font-bold uppercase tracking-widest px-8 py-4.5 rounded-2xl shadow-lg shadow-brand-magenta/15 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-magenta/25"
-              >
-                <MessageSquare className="w-4 h-4" />
-                <span>Quero conversar com você</span>
-              </a>
-              
-              <a
-                href="#sobre"
-                className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 text-xs font-bold uppercase tracking-widest px-8 py-4.5 rounded-2xl shadow-xs transition-all duration-300 transform hover:-translate-y-1 hover:border-slate-300"
-              >
-                <span>Conheça minha trajetória.</span>
-              </a>
-            </motion.div>
-
+            <img
+              ref={imgRef}
+              src="https://i.postimg.cc/KvTP9N0s/IMG-20260715-WA0033.jpg"
+              alt="Psicóloga Nayara Helena de Araújo - Espaço de Acolhimento"
+              className={`w-full h-auto object-cover transition-all duration-700 ease-out group-hover:scale-[1.01] ${
+                imageLoaded ? 'blur-0 opacity-100 scale-100' : 'blur-md opacity-90 scale-[1.015]'
+              }`}
+              referrerPolicy="no-referrer"
+              loading="eager"
+              decoding="sync"
+              onLoad={() => setImageLoaded(true)}
+              {...({ fetchPriority: "high" } as any)}
+            />
           </div>
 
-          {/* Right Column: Hero Image Frame representing Nayara's premium photo */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <motion.div 
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-[290px] sm:max-w-[330px] aspect-[185/415] rounded-[2.25rem] overflow-hidden shadow-2xl shadow-amber-900/5 border-4 border-white bg-white group"
+          {/* CTA Buttons placed beautifully below the image */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 sm:mt-12 w-full max-w-2xl px-4">
+            <a
+              href="https://wa.me/5516997576550?text=Ol%C3%A1%20Nayara%2C%20gostaria%20de%20agendar%20uma%20consulta"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-brand-magenta hover:bg-brand-magenta-dark text-white text-xs sm:text-sm font-bold uppercase tracking-widest px-8 py-4.5 rounded-2xl shadow-lg shadow-brand-magenta/15 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-magenta/25"
             >
-              {/* Soft visual filter over the image */}
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-magenta/5 via-transparent to-transparent z-10 pointer-events-none"></div>
-              
-              <img
-                src={heroImage}
-                alt="Psicóloga Nayara Helena de Araújo"
-                className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-103"
-                referrerPolicy="no-referrer"
-                loading="eager"
-              />
-              
-              {/* Premium Glassmorphic Overlay Badge */}
-              <div className="absolute bottom-6 left-5 right-5 bg-white/90 backdrop-blur-md rounded-2xl p-4 border border-slate-100 shadow-xl z-20 transition-all duration-300 transform group-hover:-translate-y-1">
-                <p className="text-xs font-bold text-slate-800 tracking-wide uppercase">Nayara Helena de Araújo</p>
-                <p className="text-[10px] text-brand-magenta font-extrabold uppercase mt-0.5 tracking-wider">Psicóloga Clínica • CRP 16/10550</p>
-              </div>
-            </motion.div>
+              <MessageSquare className="w-5 h-5" />
+              <span>Quero conversar com você</span>
+            </a>
+            
+            <a
+              href="#sobre"
+              className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 text-xs sm:text-sm font-bold uppercase tracking-widest px-8 py-4.5 rounded-2xl shadow-xs transition-all duration-300 transform hover:-translate-y-1 hover:border-slate-300"
+            >
+              <span>Conheça minha trajetória.</span>
+            </a>
           </div>
-
         </motion.div>
 
         {/* 3 Caixinhas Grid */}

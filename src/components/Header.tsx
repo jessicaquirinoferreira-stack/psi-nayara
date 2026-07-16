@@ -58,12 +58,12 @@ export default function Header({ onContactClick }: HeaderProps) {
         <a href="#inicio" className="flex items-center space-x-3 group">
           <motion.div 
             whileHover={{ scale: 1.05 }}
-            className="relative w-12 h-12 sm:w-14 h-14 rounded-full bg-white border border-brand-magenta/30 overflow-hidden shadow-sm shrink-0 flex items-center justify-center"
+            className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white border border-brand-magenta/30 overflow-hidden shadow-md shrink-0 flex items-center justify-center"
           >
             <img 
-              src="https://i.postimg.cc/htygLrLz/Chat-GPT-Image-9-de-jul-de-2026-13-15-20.png" 
+              src="https://i.postimg.cc/PrcDYFYy/Chat-GPT-Image-15-de-jul-de-2026-15-58-03.png" 
               alt="Logo Psi Nayara Helena de Araújo" 
-              className="w-full h-full object-contain p-1 filter drop-shadow-[0_1px_2px_rgba(192,101,50,0.05)]"
+              className="w-[95%] h-[95%] p-0.5 object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_4px_rgba(192,101,50,0.1)]"
               referrerPolicy="no-referrer"
             />
           </motion.div>
@@ -71,10 +71,11 @@ export default function Header({ onContactClick }: HeaderProps) {
             <span className="font-serif text-xs sm:text-sm md:text-base font-extrabold tracking-wide text-brand-cyan uppercase leading-tight group-hover:text-brand-magenta transition-colors duration-200">
               NAYARA HELENA DE ARAÚJO
             </span>
-            <div className="flex flex-wrap items-center gap-x-1.5 text-[9px] sm:text-[10px] md:text-[11px] font-sans font-bold text-brand-magenta tracking-wide leading-none mt-1">
-              <span>Psicóloga Clínica | Psicanalista</span>
-              <span className="text-slate-300 font-normal">|</span>
-              <span className="text-slate-500 font-mono font-medium">CRP 16/10 550</span>
+            <div className="text-[9px] sm:text-[10px] md:text-[11px] font-sans font-bold text-brand-magenta tracking-wide leading-none mt-1">
+              Psicóloga Clínica | Psicanalista
+            </div>
+            <div className="text-[8px] sm:text-[9px] md:text-[10px] font-mono font-medium text-slate-500 mt-0.5">
+              CRP 16/10 550
             </div>
           </div>
         </a>
