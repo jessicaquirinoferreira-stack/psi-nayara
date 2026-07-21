@@ -21,6 +21,17 @@ export default function Contato() {
     }));
   };
 
+  const getWhatsAppUrl = () => {
+    const text = `Olá, Dra. Nayara! Enviei um contato pelo site com os seguintes detalhes:\n\n*Nome:* ${formData.name}\n*Telefone:* ${formData.phone}\n*E-mail:* ${formData.email}\n*Mensagem:* ${formData.message}`;
+    return `https://wa.me/5527998625590?text=${encodeURIComponent(text)}`;
+  };
+
+  const getMailtoUrl = () => {
+    const subject = `Contato via Site - ${formData.name}`;
+    const body = `Olá, Dra. Nayara!\n\nEnviei uma mensagem de contato pelo seu site:\n\nNome: ${formData.name}\nTelefone: ${formData.phone}\nE-mail: ${formData.email}\n\nMensagem:\n${formData.message}\n\nAtenciosamente,\n${formData.name}`;
+    return `mailto:psinayaraaraujo@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.phone || !formData.email || !formData.message) {
@@ -29,6 +40,11 @@ export default function Contato() {
     }
     setError('');
     setSubmitted(true);
+    
+    // Tenta abrir o WhatsApp em uma nova aba automaticamente
+    const text = `Olá, Dra. Nayara! Enviei um contato pelo site com os seguintes detalhes:\n\n*Nome:* ${formData.name}\n*Telefone:* ${formData.phone}\n*E-mail:* ${formData.email}\n*Mensagem:* ${formData.message}`;
+    const waUrl = `https://wa.me/5527998625590?text=${encodeURIComponent(text)}`;
+    window.open(waUrl, '_blank', 'noopener,noreferrer');
   };
 
   const handleReset = () => {
@@ -187,17 +203,36 @@ export default function Contato() {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}
-                  className="text-center py-10 px-4 flex flex-col items-center"
+                  className="text-center py-8 px-4 flex flex-col items-center"
                 >
                   <div className="w-16 h-16 bg-emerald-50 text-emerald-500 rounded-full flex items-center justify-center mb-6 shadow-inner animate-bounce">
                     <CheckCircle className="w-10 h-10" />
                   </div>
                   
-                  <h3 className="font-sans text-2xl font-bold text-slate-800 mb-3 tracking-tight">Mensagem Enviada!</h3>
+                  <h3 className="font-sans text-2xl font-bold text-slate-800 mb-3 tracking-tight">Formulário Preenchido!</h3>
                   
-                  <p className="font-sans text-sm text-slate-500 max-w-lg mx-auto leading-relaxed mb-8">
-                    Olá <strong className="text-slate-800 font-bold">{formData.name}</strong>, agradecemos seu contato! Suas dúvidas foram recebidas e entraremos em contato o mais rápido possível através do e-mail <span className="text-brand-magenta font-semibold">{formData.email}</span> ou pelo telefone <span className="text-slate-800 font-semibold">{formData.phone}</span>.
+                  <p className="font-sans text-sm text-slate-500 max-w-lg mx-auto leading-relaxed mb-6 font-medium">
+                    Olá <strong className="text-slate-800 font-bold">{formData.name}</strong>, para que sua mensagem chegue com total prioridade à Dra. Nayara, clique em um dos botões abaixo para enviar via WhatsApp ou por E-mail:
                   </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-md mb-8">
+                    <a
+                      href={getWhatsAppUrl()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center space-x-2 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold uppercase tracking-wider text-xs py-3.5 px-5 rounded-2xl shadow-lg shadow-emerald-500/10 transition-all text-center"
+                    >
+                      <span>Enviar por WhatsApp</span>
+                    </a>
+                    
+                    <a
+                      href={getMailtoUrl()}
+                      className="inline-flex items-center justify-center space-x-2 bg-slate-800 hover:bg-slate-900 text-white font-bold uppercase tracking-wider text-xs py-3.5 px-5 rounded-2xl shadow-lg transition-all text-center"
+                    >
+                      <Mail className="w-4 h-4" />
+                      <span>Enviar por E-mail</span>
+                    </a>
+                  </div>
 
                   <button
                     onClick={handleReset}

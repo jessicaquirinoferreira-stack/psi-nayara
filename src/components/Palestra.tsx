@@ -144,7 +144,7 @@ export default function Palestra() {
 
             <div className="pt-4 flex flex-wrap gap-4">
               <a 
-                href="https://wa.me/5516997576550?text=Ol%C3%A1%20Nayara%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20suas%20Palestras%20de%20Sa%C3%BAde%20Mental"
+                href="https://wa.me/5527998625590?text=Ol%C3%A1%20Nayara%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20suas%20Palestras%20de%20Sa%C3%BAde%20Mental"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 bg-brand-magenta hover:bg-brand-magenta-dark text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-full shadow-lg hover:shadow-brand-magenta/20 transition-all transform hover:-translate-y-0.5"

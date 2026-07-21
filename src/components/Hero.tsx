@@ -95,7 +95,7 @@ export default function Hero() {
           {/* CTA Buttons placed beautifully below the image */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 sm:mt-12 w-full max-w-2xl px-4">
             <a
-              href="https://wa.me/5516997576550?text=Ol%C3%A1%20Nayara%2C%20gostaria%20de%20agendar%20uma%20consulta"
+              href="https://wa.me/5527998625590?text=Ol%C3%A1%20Nayara%2C%20gostaria%20de%20agendar%20uma%20consulta"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-brand-magenta hover:bg-brand-magenta-dark text-white text-xs sm:text-sm font-bold uppercase tracking-widest px-8 py-4.5 rounded-2xl shadow-lg shadow-brand-magenta/15 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-magenta/25"

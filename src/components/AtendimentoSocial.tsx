@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { HelpCircle, CheckCircle, Send, AlertCircle, Heart } from 'lucide-react';
+import { HelpCircle, CheckCircle, Send, AlertCircle, Heart, Mail } from 'lucide-react';
 
 export default function AtendimentoSocial() {
   const [formData, setFormData] = useState({
@@ -32,6 +32,38 @@ export default function AtendimentoSocial() {
     }));
   };
 
+  const getStatusLabel = (status: string) => {
+    switch (status) {
+      case 'employed': return 'Empregado (CLT / PJ)';
+      case 'unemployed': return 'Desempregado(a)';
+      case 'student': return 'Estudante';
+      case 'freelancer': return 'Autônomo / Freelancer';
+      case 'retired': return 'Aposentado(a) / Pensionista';
+      default: return status || 'Não informado';
+    }
+  };
+
+  const getIncomeLabel = (bracket: string) => {
+    switch (bracket) {
+      case 'under1': return 'Até 1 Salário Mínimo';
+      case '1to2': return 'De 1 a 2 Salários Mínimos';
+      case '2to3': return 'De 2 a 3 Salários Mínimos';
+      case 'above3': return 'Acima de 3 Salários Mínimos';
+      default: return bracket || 'Não informado';
+    }
+  };
+
+  const getWhatsAppUrl = () => {
+    const text = `Olá, Dra. Nayara! Gostaria de solicitar triagem para o Atendimento Social. Aqui estão os meus dados:\n\n*Nome Completo:* ${formData.fullName}\n*Telefone:* ${formData.phone}\n*E-mail:* ${formData.email}\n*Situação Profissional:* ${getStatusLabel(formData.employmentStatus)}\n*Faixa de Renda:* ${getIncomeLabel(formData.incomeBracket)}\n*Motivo da Busca:* ${formData.reason}`;
+    return `https://wa.me/5527998625590?text=${encodeURIComponent(text)}`;
+  };
+
+  const getMailtoUrl = () => {
+    const subject = `Triagem Atendimento Social - ${formData.fullName}`;
+    const body = `Olá, Dra. Nayara!\n\nGostaria de solicitar triagem para o Atendimento Social. Aqui estão os meus dados:\n\nNome Completo: ${formData.fullName}\nTelefone: ${formData.phone}\nE-mail: ${formData.email}\nSituação Profissional: ${getStatusLabel(formData.employmentStatus)}\nFaixa de Renda Familiar: ${getIncomeLabel(formData.incomeBracket)}\n\nMotivo da busca:\n${formData.reason}\n\nDeclaro que as informações acima são verdadeiras.\n\nAtenciosamente,\n${formData.fullName}`;
+    return `mailto:psinayaraaraujo@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.fullName || !formData.phone || !formData.email || !formData.incomeBracket || !formData.reason) {
@@ -45,6 +77,11 @@ export default function AtendimentoSocial() {
     
     setErrorMessage("");
     setFormSubmitted(true);
+
+    // Tenta abrir o WhatsApp em uma nova aba automaticamente
+    const text = `Olá, Dra. Nayara! Gostaria de solicitar triagem para o Atendimento Social. Aqui estão os meus dados:\n\n*Nome Completo:* ${formData.fullName}\n*Telefone:* ${formData.phone}\n*E-mail:* ${formData.email}\n*Situação Profissional:* ${getStatusLabel(formData.employmentStatus)}\n*Faixa de Renda:* ${getIncomeLabel(formData.incomeBracket)}\n*Motivo da Busca:* ${formData.reason}`;
+    const waUrl = `https://wa.me/5527998625590?text=${encodeURIComponent(text)}`;
+    window.open(waUrl, '_blank', 'noopener,noreferrer');
   };
 
   const handleReset = () => {
@@ -283,12 +320,31 @@ export default function AtendimentoSocial() {
                 </div>
                 
                 <h3 className="font-sans text-2xl font-bold text-slate-800 mb-3 tracking-tight">
-                  Solicitação Recebida com Sucesso!
+                  Dados de Triagem Prontos!
                 </h3>
                 
-                <p className="font-sans text-sm text-slate-500 max-w-lg mx-auto leading-relaxed mb-8">
-                  Agradecemos sua confiança, <strong className="text-slate-800 font-bold">{formData.fullName}</strong>. Suas respostas foram salvas em nosso sistema e estão protegidas por absoluto sigilo. Entraremos em contato via WhatsApp no número <strong className="text-slate-800 font-bold">{formData.phone}</strong> em até 48 horas úteis para repassar o resultado da triagem.
+                <p className="font-sans text-sm text-slate-500 max-w-lg mx-auto leading-relaxed mb-6 font-medium">
+                  Agradecemos sua confiança, <strong className="text-slate-800 font-bold">{formData.fullName}</strong>. Para encaminhar de forma criptografada e segura seus dados para a Dra. Nayara Helena, escolha o canal de sua preferência abaixo:
                 </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-md mb-8">
+                  <a
+                    href={getWhatsAppUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center space-x-2 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold uppercase tracking-wider text-xs py-3.5 px-5 rounded-2xl shadow-lg shadow-emerald-500/10 transition-all text-center"
+                  >
+                    <span>Enviar por WhatsApp</span>
+                  </a>
+                  
+                  <a
+                    href={getMailtoUrl()}
+                    className="inline-flex items-center justify-center space-x-2 bg-slate-800 hover:bg-slate-900 text-white font-bold uppercase tracking-wider text-xs py-3.5 px-5 rounded-2xl shadow-lg transition-all text-center"
+                  >
+                    <Mail className="w-4 h-4" />
+                    <span>Enviar por E-mail</span>
+                  </a>
+                </div>
 
                 <button
                   onClick={handleReset}
