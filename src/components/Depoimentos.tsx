@@ -1,15 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Star, Heart } from 'lucide-react';
-
-const GoogleLogo = () => (
-  <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0" xmlns="http://www.w3.org/2000/svg">
-    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
-    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
-  </svg>
-);
+import { Heart } from 'lucide-react';
 
 export default function Depoimentos() {
   const chats = [
@@ -64,56 +55,7 @@ export default function Depoimentos() {
           </p>
         </div>
 
-        {/* Google Reviews Badge Certificate Card */}
-        <motion.div 
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          whileHover={{ scale: 1.01 }}
-          className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-xl shadow-slate-100/40 max-w-4xl mx-auto mb-16 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 transition-transform"
-        >
-          {/* Backdrop shine */}
-          <div className="absolute top-0 left-0 w-40 h-40 bg-brand-magenta/5 rounded-full blur-3xl pointer-events-none"></div>
-          <div className="absolute bottom-0 right-0 w-40 h-40 bg-brand-cyan/5 rounded-full blur-3xl pointer-events-none"></div>
-          
-          <div className="flex flex-col sm:flex-row items-center gap-5 relative z-10 text-center sm:text-left">
-            {/* Stamp Gold Seal */}
-            <div className="w-20 h-20 rounded-full bg-slate-50 border-4 border-amber-400 flex items-center justify-center shadow-lg shadow-amber-100/60 relative shrink-0">
-              <div className="absolute inset-1 rounded-full border border-dashed border-amber-400 flex flex-col items-center justify-center animate-spin-slow">
-                <Star className="w-7 h-7 fill-amber-400 text-amber-400" />
-                <span className="text-[10px] font-extrabold tracking-widest text-amber-600 font-mono mt-0.5">4.9</span>
-              </div>
-            </div>
-            
-            <div>
-              <div className="flex items-center justify-center sm:justify-start gap-2 mb-1.5">
-                <GoogleLogo />
-                <span className="font-sans font-bold text-slate-800 tracking-tight text-sm">Google Reviews</span>
-              </div>
-              <h3 className="font-sans font-extrabold text-slate-900 tracking-tight text-lg sm:text-xl leading-snug">
-                Certificado de Excelência Profissional
-              </h3>
-              <p className="text-sm text-slate-500 mt-1 max-w-md font-medium leading-relaxed">
-                Reconhecimento de qualidade com média de <strong className="text-slate-800 font-semibold">4.9 estrelas</strong> baseado nas avaliações espontâneas enviadas por nossos pacientes.
-              </p>
-            </div>
-          </div>
 
-          <div className="flex flex-col items-center md:items-end justify-center shrink-0 relative z-10 text-center md:text-right border-t md:border-t-0 md:border-l border-slate-100 pt-6 md:pt-0 md:pl-8 w-full md:w-auto">
-            <div className="flex items-center gap-1 text-amber-500 mb-2">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className={`w-5 h-5 ${i === 4 ? 'fill-current opacity-95 text-amber-500' : 'fill-current'}`} />
-              ))}
-            </div>
-            <div className="font-mono text-3xl font-black text-slate-800 flex items-baseline gap-1.5">
-              4.9 <span className="text-sm font-semibold text-slate-400 font-sans">/ 5.0</span>
-            </div>
-            <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100 uppercase tracking-wider mt-1.5 block">
-              ✓ Verificado pelo Google
-            </span>
-          </div>
-        </motion.div>
 
         {/* WhatsApp Simulated Prints Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

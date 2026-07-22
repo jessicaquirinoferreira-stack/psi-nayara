@@ -54,14 +54,14 @@ export default function AtendimentoSocial() {
   };
 
   const getWhatsAppUrl = () => {
-    const text = `Olá, Dra. Nayara! Gostaria de solicitar triagem para o Atendimento Social. Aqui estão os meus dados:\n\n*Nome Completo:* ${formData.fullName}\n*Telefone:* ${formData.phone}\n*E-mail:* ${formData.email}\n*Situação Profissional:* ${getStatusLabel(formData.employmentStatus)}\n*Faixa de Renda:* ${getIncomeLabel(formData.incomeBracket)}\n*Motivo da Busca:* ${formData.reason}`;
+    const text = `Olá, Nayara! Gostaria de solicitar triagem para o Atendimento Social. Aqui estão os meus dados:\n\n*Nome Completo:* ${formData.fullName}\n*Telefone:* ${formData.phone}\n*E-mail:* ${formData.email}\n*Situação Profissional:* ${getStatusLabel(formData.employmentStatus)}\n*Faixa de Renda:* ${getIncomeLabel(formData.incomeBracket)}\n*Motivo da Busca:* ${formData.reason}`;
     return `https://wa.me/5527998625590?text=${encodeURIComponent(text)}`;
   };
 
   const getMailtoUrl = () => {
     const subject = `Triagem Atendimento Social - ${formData.fullName}`;
-    const body = `Olá, Dra. Nayara!\n\nGostaria de solicitar triagem para o Atendimento Social. Aqui estão os meus dados:\n\nNome Completo: ${formData.fullName}\nTelefone: ${formData.phone}\nE-mail: ${formData.email}\nSituação Profissional: ${getStatusLabel(formData.employmentStatus)}\nFaixa de Renda Familiar: ${getIncomeLabel(formData.incomeBracket)}\n\nMotivo da busca:\n${formData.reason}\n\nDeclaro que as informações acima são verdadeiras.\n\nAtenciosamente,\n${formData.fullName}`;
-    return `mailto:psinayaraaraujo@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const body = `Olá, Nayara!\n\nGostaria de solicitar triagem para o Atendimento Social. Aqui estão os meus dados:\n\nNome Completo: ${formData.fullName}\nTelefone: ${formData.phone}\nE-mail: ${formData.email}\nSituação Profissional: ${getStatusLabel(formData.employmentStatus)}\nFaixa de Renda Familiar: ${getIncomeLabel(formData.incomeBracket)}\n\nMotivo da busca:\n${formData.reason}\n\nDeclaro que as informações acima são verdadeiras.\n\nAtenciosamente,\n${formData.fullName}`;
+    return `mailto:psinayaraaraujo@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -79,7 +79,7 @@ export default function AtendimentoSocial() {
     setFormSubmitted(true);
 
     // Tenta abrir o WhatsApp em uma nova aba automaticamente
-    const text = `Olá, Dra. Nayara! Gostaria de solicitar triagem para o Atendimento Social. Aqui estão os meus dados:\n\n*Nome Completo:* ${formData.fullName}\n*Telefone:* ${formData.phone}\n*E-mail:* ${formData.email}\n*Situação Profissional:* ${getStatusLabel(formData.employmentStatus)}\n*Faixa de Renda:* ${getIncomeLabel(formData.incomeBracket)}\n*Motivo da Busca:* ${formData.reason}`;
+    const text = `Olá, Nayara! Gostaria de solicitar triagem para o Atendimento Social. Aqui estão os meus dados:\n\n*Nome Completo:* ${formData.fullName}\n*Telefone:* ${formData.phone}\n*E-mail:* ${formData.email}\n*Situação Profissional:* ${getStatusLabel(formData.employmentStatus)}\n*Faixa de Renda:* ${getIncomeLabel(formData.incomeBracket)}\n*Motivo da Busca:* ${formData.reason}`;
     const waUrl = `https://wa.me/5527998625590?text=${encodeURIComponent(text)}`;
     window.open(waUrl, '_blank', 'noopener,noreferrer');
   };
@@ -324,7 +324,7 @@ export default function AtendimentoSocial() {
                 </h3>
                 
                 <p className="font-sans text-sm text-slate-500 max-w-lg mx-auto leading-relaxed mb-6 font-medium">
-                  Agradecemos sua confiança, <strong className="text-slate-800 font-bold">{formData.fullName}</strong>. Para encaminhar de forma criptografada e segura seus dados para a Dra. Nayara Helena, escolha o canal de sua preferência abaixo:
+                  Agradecemos sua confiança, <strong className="text-slate-800 font-bold">{formData.fullName}</strong>. Para encaminhar de forma criptografada e segura seus dados para a Nayara Helena, escolha o canal de sua preferência abaixo:
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-md mb-8">

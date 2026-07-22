@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Redefina from './components/Redefina';
 import Sobre from './components/Sobre';
 import Servicos from './components/Servicos';
 import EssenciaPsicanalise from './components/EssenciaPsicanalise';
@@ -44,10 +43,7 @@ export default function App() {
                 {/* Hero Banner Section */}
                 <Hero />
 
-                {/* Highlight Callout: Redefina sua Jornada Pessoal */}
-                <Redefina />
-
-                {/* Detailed Professional Biography */}
+                {/* Detailed Professional Biography & Formation */}
                 <Sobre />
 
                 {/* Interactive Services Board & CRP license info */}

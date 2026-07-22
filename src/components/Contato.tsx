@@ -22,14 +22,14 @@ export default function Contato() {
   };
 
   const getWhatsAppUrl = () => {
-    const text = `Olá, Dra. Nayara! Enviei um contato pelo site com os seguintes detalhes:\n\n*Nome:* ${formData.name}\n*Telefone:* ${formData.phone}\n*E-mail:* ${formData.email}\n*Mensagem:* ${formData.message}`;
+    const text = `Olá, Nayara! Enviei um contato pelo site com os seguintes detalhes:\n\n*Nome:* ${formData.name}\n*Telefone:* ${formData.phone}\n*E-mail:* ${formData.email}\n*Mensagem:* ${formData.message}`;
     return `https://wa.me/5527998625590?text=${encodeURIComponent(text)}`;
   };
 
   const getMailtoUrl = () => {
     const subject = `Contato via Site - ${formData.name}`;
-    const body = `Olá, Dra. Nayara!\n\nEnviei uma mensagem de contato pelo seu site:\n\nNome: ${formData.name}\nTelefone: ${formData.phone}\nE-mail: ${formData.email}\n\nMensagem:\n${formData.message}\n\nAtenciosamente,\n${formData.name}`;
-    return `mailto:psinayaraaraujo@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const body = `Olá, Nayara!\n\nEnviei uma mensagem de contato pelo seu site:\n\nNome: ${formData.name}\nTelefone: ${formData.phone}\nE-mail: ${formData.email}\n\nMensagem:\n${formData.message}\n\nAtenciosamente,\n${formData.name}`;
+    return `mailto:psinayaraaraujo@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -42,7 +42,7 @@ export default function Contato() {
     setSubmitted(true);
     
     // Tenta abrir o WhatsApp em uma nova aba automaticamente
-    const text = `Olá, Dra. Nayara! Enviei um contato pelo site com os seguintes detalhes:\n\n*Nome:* ${formData.name}\n*Telefone:* ${formData.phone}\n*E-mail:* ${formData.email}\n*Mensagem:* ${formData.message}`;
+    const text = `Olá, Nayara! Enviei um contato pelo site com os seguintes detalhes:\n\n*Nome:* ${formData.name}\n*Telefone:* ${formData.phone}\n*E-mail:* ${formData.email}\n*Mensagem:* ${formData.message}`;
     const waUrl = `https://wa.me/5527998625590?text=${encodeURIComponent(text)}`;
     window.open(waUrl, '_blank', 'noopener,noreferrer');
   };
@@ -212,7 +212,7 @@ export default function Contato() {
                   <h3 className="font-sans text-2xl font-bold text-slate-800 mb-3 tracking-tight">Formulário Preenchido!</h3>
                   
                   <p className="font-sans text-sm text-slate-500 max-w-lg mx-auto leading-relaxed mb-6 font-medium">
-                    Olá <strong className="text-slate-800 font-bold">{formData.name}</strong>, para que sua mensagem chegue com total prioridade à Dra. Nayara, clique em um dos botões abaixo para enviar via WhatsApp ou por E-mail:
+                    Olá <strong className="text-slate-800 font-bold">{formData.name}</strong>, para que sua mensagem chegue com total prioridade à Nayara, clique em um dos botões abaixo para enviar via WhatsApp ou por E-mail:
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-md mb-8">
@@ -279,7 +279,7 @@ export default function Contato() {
 
                   {/* Email */}
                   <a
-                    href="mailto:psinayaraaraujo@outlook.com"
+                    href="mailto:psinayaraaraujo@gmail.com"
                     className="flex items-center space-x-4 p-3 rounded-2xl hover:bg-white/5 transition-colors group border border-transparent hover:border-white/5"
                   >
                     <div className="p-3 bg-brand-magenta/10 text-brand-magenta rounded-xl group-hover:scale-105 transition-transform">
@@ -288,7 +288,7 @@ export default function Contato() {
                     <div>
                       <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">E-mail</h4>
                       <p className="text-sm font-bold text-slate-100 mt-0.5 group-hover:text-brand-magenta-light transition-colors">
-                        psinayaraaraujo@outlook.com
+                        psinayaraaraujo@gmail.com
                       </p>
                     </div>
                   </a>

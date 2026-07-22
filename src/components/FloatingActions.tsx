@@ -24,7 +24,7 @@ export default function FloatingActions() {
       actions: [
         {
           label: 'Agendar Consulta / Sessão',
-          href: 'https://wa.me/5527998625590?text=Olá!%20Gostaria%20de%20saber%2520mais%20sobre%20as%20sessões%20de%20psicoterapia%20e%20agendar%20um%20horário.',
+          href: 'https://wa.me/5527998625590?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20sessões%20de%20psicoterapia%20e%20agendar%20um%20horário.',
           isExternal: true
         },
         {
